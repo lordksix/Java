@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "intro/Demos/lib/courserajava.jar",
+        "intro/Demos/lib/apache-csv.jar"
+    ],
+    "java.dependency.packagePresentation": "flat",
+    "java.project.outputPath": "intro\\Demos\\bin"
+}

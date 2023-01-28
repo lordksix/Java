@@ -1,0 +1,91 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch StringsSecondAssignments",
+            "request": "launch",
+            "mainClass": "genes.StringsSecondAssignments",
+            "projectName": "java_63670635"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringsThirdAssignments",
+            "request": "launch",
+            "mainClass": "genes.StringsThirdAssignments",
+            "projectName": "java_63670635"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringsSecondAssignments",
+            "request": "launch",
+            "mainClass": "StringsSecondAssignments",
+            "projectName": "java_63670635"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringsFirstAssignments",
+            "request": "launch",
+            "mainClass": "StringsFirstAssignments",
+            "projectName": "java_63670635"
+        },
+        {
+            "type": "java",
+            "name": "Launch TagFinder",
+            "request": "launch",
+            "mainClass": "TagFinder",
+            "projectName": "java_63670635"
+        },
+        {
+            "type": "java",
+            "name": "Launch Point1",
+            "request": "launch",
+            "mainClass": "Point1",
+            "projectName": "java_63670635"
+        },
+        {
+            "type": "java",
+            "name": "Launch PerimeterAssignmentRunner",
+            "request": "launch",
+            "mainClass": "PerimeterAssignmentRunner",
+            "projectName": "java_63670635"
+        },
+        {
+            "type": "java",
+            "name": "Launch Perimeter",
+            "request": "launch",
+            "mainClass": "Perimeter",
+            "projectName": "java_63670635"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "java_63670635"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "intro"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hello",
+            "request": "launch",
+            "mainClass": "Hello",
+            "projectName": "intro"
+        }
+    ]
+}
