@@ -1,8 +1,10 @@
 package transport;
 
+import exception.SpeedException;
+
 public abstract class Cargo extends Car{
 
-    public Cargo(String name) {
+    public Cargo(String name) throws SpeedException {
         super(name);
     }
     
@@ -12,7 +14,7 @@ public abstract class Cargo extends Car{
     }
 
 
-    public Cargo(String name, int speed, int gasoline, boolean engineState) {
+    public Cargo(String name, int speed, int gasoline, boolean engineState) throws SpeedException {
         super(name, speed, gasoline, engineState);
     }
     public void setCurrenntCargoLoad(int currentCargoLoad) {
@@ -24,7 +26,7 @@ public abstract class Cargo extends Car{
     }
 
     @Override
-    public void setSpeed(int speed) {
+    public void setSpeed(int speed) throws SpeedException {
         super.setSpeed(speed - getCurrentCargoLoad()/100);
     }
 

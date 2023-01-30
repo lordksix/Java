@@ -1,9 +1,11 @@
 package transport;
 
+import exception.SpeedException;
+
 public class SUV extends Cargo implements Convertible{
     private boolean topIsUp;
 
-    public SUV(String name) {
+    public SUV(String name) throws SpeedException {
         super(name);
     }
 
@@ -11,7 +13,7 @@ public class SUV extends Cargo implements Convertible{
         super();
     }
 
-    public SUV(String name, int speed, int gasoline, boolean engineState) {
+    public SUV(String name, int speed, int gasoline, boolean engineState) throws SpeedException {
         super(name, speed, gasoline, engineState);
     }
 

@@ -1,7 +1,8 @@
 package transport;
 import java.time.LocalDate;
 import java.time.Period;
-import static java.lang.Math.min;
+
+import exception.SpeedException;
 
 public abstract class Car implements Vehicle{
     private String name;
@@ -13,19 +14,17 @@ public abstract class Car implements Vehicle{
     //private static final int MAX_SPEED = 350;
     public abstract int getMaxSpeed();
     
-    public Car(String name) {
+    public Car(String name) throws SpeedException {
         this(name,0,0,false);
     }
     public Car(){}    
 
-    public Car(String name, int speed, int gasoline, boolean engineState) {
+    public Car(String name, int speed, int gasoline, boolean engineState) throws SpeedException {
         setName(name);
         setSpeed(speed);
         setGasoline(gasoline);
         setEngineState(engineState);
     }
-
-
 
     @Override
     public boolean equals(Object obj) {
@@ -56,9 +55,11 @@ public abstract class Car implements Vehicle{
     public int getSpeed() {
         return speed;
     }
-    public void setSpeed(int speed) {
+    public void setSpeed(int speed) throws SpeedException {
         //this.speed = min(speed,MAX_SPEED);
-        this.speed = min(speed,getMaxSpeed());
+        if(speed>getMaxSpeed()){throw new SpeedException(String.format("%s cannot go %dmph. Max speed is %dmph", getName(),speed,getMaxSpeed()));}
+        this.speed=speed;
+        //this.speed = min(speed,getMaxSpeed());
     }
     
     public int getGasoline() {

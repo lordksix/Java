@@ -1,9 +1,11 @@
 package transport;
 
+import exception.SpeedException;
+
 public class SportsCar extends Car implements Convertible{
     private boolean topIsUp;
     
-    public SportsCar(String name) {
+    public SportsCar(String name) throws SpeedException {
         super(name);
     }
     
@@ -13,12 +15,12 @@ public class SportsCar extends Car implements Convertible{
     }
 
 
-    public SportsCar(String name, int speed, int gasoline, boolean engineState) {
+    public SportsCar(String name, int speed, int gasoline, boolean engineState) throws SpeedException {
         super(name, speed, gasoline, engineState);
     }
 
     @Override
-    public void setSpeed(int speed) {
+    public void setSpeed(int speed) throws SpeedException {
         super.setSpeed((int)(speed*1.1));
     }
 
@@ -34,7 +36,12 @@ public class SportsCar extends Car implements Convertible{
     }
     
     public void race() {
-    	setSpeed(getMaxSpeed());
+    	try {
+            setSpeed(getMaxSpeed());
+        } catch (SpeedException e) {
+            System.out.println("Unexpected error: we tried to race, but we were told that the maximum speed was too fast. See stack track for more details.");
+            e.printStackTrace();
+        }
     }
 
     
