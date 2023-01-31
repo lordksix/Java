@@ -6,6 +6,24 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Planet",
+            "request": "launch",
+            "args": 
+            [
+                "175"
+            ], 
+            "mainClass": "com.pasquel.lqexercises.Planet",
+            "projectName": "ClassExercises_205908c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch CoffeeExerciser",
+            "request": "launch",
+            "mainClass": "com.pasquel.lqexercises.CoffeeExerciser",
+            "projectName": "ClassExercises_205908c0"
+        },
+        {
+            "type": "java",
             "name": "Launch ExercisePrint",
             "request": "launch",
             "mainClass": "com.pasquel.lqexercises.ExercisePrint",

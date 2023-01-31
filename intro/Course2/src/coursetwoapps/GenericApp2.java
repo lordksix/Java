@@ -2,6 +2,7 @@ package coursetwoapps;
 
 import demos.Stack;
 import demos.StackArray;
+import exception.SpeedException;
 import transport.SportsCar;
 import transport.Car;
 
@@ -21,7 +22,7 @@ public class GenericApp2 {
     return ints;
     }
 
-    public static Stack<SportsCar> makeStackSportsCar(Stack<SportsCar> cars) {
+    public static Stack<SportsCar> makeStackSportsCar(Stack<SportsCar> cars) throws SpeedException {
         cars.push(new SportsCar("Mach I", 250, 21, true));
         cars.push(new SportsCar("Mach II", 250, 21, true));
         cars.push(new SportsCar("Mach III", 250, 21, true));
@@ -68,7 +69,7 @@ public class GenericApp2 {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SpeedException {
         // Create stacks of differents types
         Stack<Integer> ints =  new StackArray<>();
         Stack<String> strings =  new StackArray<>();
