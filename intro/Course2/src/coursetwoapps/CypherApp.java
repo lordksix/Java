@@ -1,6 +1,6 @@
 package coursetwoapps;
 
-import CourseTwo.CaesarBreaker;
+import Cipher.CaesarBreaker;
 import CourseTwo.WordLengths;
 
 
