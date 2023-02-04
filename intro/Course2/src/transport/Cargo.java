@@ -29,8 +29,6 @@ public abstract class Cargo extends Car{
     public void setSpeed(int speed) throws SpeedException {
         super.setSpeed(speed - getCurrentCargoLoad()/100);
     }
-
-    private int cargoCapacity;
     private int currentCargoLoad;
     
     @Override
