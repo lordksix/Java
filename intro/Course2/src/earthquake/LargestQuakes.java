@@ -1,9 +1,6 @@
 package earthquake;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class LargestQuakes {
     public void findLargest(ArrayList<QuakeEntry> data) {
@@ -35,11 +32,10 @@ public class LargestQuakes {
         String source = "data/nov20quakedata.atom";
         ArrayList<QuakeEntry> listqk = parser.read(source);
         System.out.println("read data for " + listqk.size() + " quakes");
-        //findLargestQuakesCollections(listqk);
         getLargest(listqk, 7);
 	} 
-    public static void main(String[] args) {
+/*     public static void main(String[] args) {
         LargestQuakes eqc = new LargestQuakes();
         eqc.bigQuakes();
-    }
+    } */
 }

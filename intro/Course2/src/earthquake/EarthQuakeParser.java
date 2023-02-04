@@ -100,7 +100,7 @@ public class EarthQuakeParser {
 	}
 	
 
-	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException{
+/* 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException{
 		EarthQuakeParser xp = new EarthQuakeParser();
 		//String source = "data/2.5_week.atom";
 		String source = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
@@ -111,5 +111,5 @@ public class EarthQuakeParser {
 		}
 		System.out.println("# quakes = "+list.size());
 		
-	}
+	} */
 }

@@ -25,8 +25,7 @@ public class EarthQuakeClient {
             quakeData.remove(minDist);
         }
         return answer;
-    }
-    
+    }  
 
     public void dumpCSV(ArrayList<QuakeEntry> list){
 		System.out.println("Latitude,Longitude,Magnitude,Info");
@@ -87,9 +86,9 @@ public class EarthQuakeClient {
         System.out.printf("Found %d that match that criteria.%n", m7.size());
         System.out.println(maf);
     }
-
+/* 
     public static void main(String[] args) {
         EarthQuakeClient eqc = new EarthQuakeClient();
         eqc.quakesWithFilter();
-    }
+    } */
 }
