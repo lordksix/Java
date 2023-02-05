@@ -22,8 +22,8 @@ public class BookExerciser {
 
     }
 
-    public static ArrayList readBooksFromFile(String name) {
-        ArrayList books = new ArrayList();
+    public static ArrayList<Book> readBooksFromFile(String name) {
+        ArrayList<Book> books = new ArrayList<>();
         FileInputStream inFile = null;
         InputStreamReader inReader = null;
         LineNumberReader lineReader = null;

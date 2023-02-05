@@ -14,10 +14,9 @@ public enum Planet {
     private final double radius; // in meters
     Planet(double mass, double radius) {
         this.mass = mass;
-        this.radius = radius;
-    }
-    private double mass() { return mass; }
-    private double radius() { return radius; }
+        this.radius = radius;}
+    public double mass() { return mass; }
+    public double radius() { return radius; }
 
     // universal gravitational constant  (m3 kg-1 s-2)
     public static final double G = 6.67300E-11;

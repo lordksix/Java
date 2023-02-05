@@ -15,7 +15,6 @@ public class EarthQuakeParser {
 
 	
 	public EarthQuakeParser() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public ArrayList<QuakeEntry> read(String source) {
