@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=SUV
+comment1.params=name
+comment1.target=SUV(java.lang.String)
+comment2.params=
+comment2.target=SUV()
+comment3.params=name\ speed\ gasoline\ engineState
+comment3.target=SUV(java.lang.String,\ int,\ int,\ boolean)
+comment4.params=
+comment4.target=void\ putTopDown()
+comment5.params=
+comment5.target=void\ putTopUp()
+comment6.params=
+comment6.target=boolean\ isTopUp()
+numComments=7

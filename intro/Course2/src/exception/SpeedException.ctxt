@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=SpeedException
+comment1.params=message
+comment1.target=SpeedException(java.lang.String)
+numComments=2

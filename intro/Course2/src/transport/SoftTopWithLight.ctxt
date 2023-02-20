@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=SoftTopWithLight
+comment1.params=
+comment1.target=void\ turnLightOn()
+comment2.params=
+comment2.target=void\ turnLightOff()
+numComments=3

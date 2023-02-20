@@ -1,0 +1,84 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch EarthquakeCityMap",
+            "request": "launch",
+            "mainClass": "pasquel.module4.EarthquakeCityMap",
+            "projectName": "NewAplet_592ec886"
+        },
+        {
+            "type": "java",
+            "name": "Launch EarthquakeCityMap",
+            "request": "launch",
+            "mainClass": "pasquel.module3.EarthquakeCityMap",
+            "projectName": "NewAplet_592ec886"
+        },
+        {
+            "type": "java",
+            "name": "Launch EarthquakeCityMapDemo",
+            "request": "launch",
+            "mainClass": "pasquel.module3.EarthquakeCityMapDemo",
+            "projectName": "NewAplet_592ec886"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "NewAplet_592ec886"
+        },
+        {
+            "type": "java",
+            "name": "Launch EarthquakeCityMapDemo",
+            "request": "launch",
+            "mainClass": "pasquel.guimodule.EarthquakeCityMapDemo",
+            "projectName": "NewAplet_592ec886"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloUCSDWorld",
+            "request": "launch",
+            "mainClass": "HelloUCSDWorld",
+            "projectName": "NewAplet_592ec886"
+        },
+        {
+            "type": "java",
+            "name": "Launch NewAplet",
+            "request": "launch",
+            "mainClass": "NewAplet",
+            "projectName": "NewAplet_592ec886"
+        },
+        {
+            "type": "java",
+            "name": "Launch MyDisplay",
+            "request": "launch",
+            "mainClass": "pasquel.guimodule.MyDisplay",
+            "projectName": "NewAplet_592ec886"
+        },
+        {
+            "type": "java",
+            "name": "Launch MyPApplet",
+            "request": "launch",
+            "mainClass": "pasquel.guimodule.MyPApplet",
+            "projectName": "NewAplet_592ec886"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloWorld",
+            "request": "launch",
+            "mainClass": "pasquel.module1.HelloWorld",
+            "projectName": "NewAplet_592ec886"
+        }
+    ]
+}

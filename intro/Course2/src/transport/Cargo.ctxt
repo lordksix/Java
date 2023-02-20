@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Cargo
+comment1.params=name
+comment1.target=Cargo(java.lang.String)
+comment2.params=
+comment2.target=Cargo()
+comment3.params=name\ speed\ gasoline\ engineState
+comment3.target=Cargo(java.lang.String,\ int,\ int,\ boolean)
+comment4.params=currentCargoLoad
+comment4.target=void\ setCurrenntCargoLoad(int)
+comment5.params=
+comment5.target=int\ getCurrentCargoLoad()
+comment6.params=speed
+comment6.target=void\ setSpeed(int)
+comment7.params=
+comment7.target=int\ getMaxSpeed()
+numComments=8

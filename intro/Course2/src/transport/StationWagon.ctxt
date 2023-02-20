@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=StationWagon
+comment1.params=name
+comment1.target=StationWagon(java.lang.String)
+comment2.params=
+comment2.target=StationWagon()
+comment3.params=name\ speed\ gasoline\ engineState
+comment3.target=StationWagon(java.lang.String,\ int,\ int,\ boolean)
+comment4.params=speed
+comment4.target=void\ setSpeed(int)
+numComments=5

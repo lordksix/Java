@@ -3,12 +3,14 @@ package pasquel.guimodule;
 import processing.core.PApplet;
 
 public class MyDisplay extends PApplet {
-
+	public void settings(){
+        size(400, 400);
+		
+    }
 	public void setup()
 	{
-		size(400, 400);
+		surface.setTitle("Hello World!");
 		background(200, 200, 200);
-		
 	}
 	
 	public void draw()
@@ -23,7 +25,7 @@ public class MyDisplay extends PApplet {
 		arc(200, 280, 75, 75, 0, PI);
 	}
     static public void main(String[] passedArgs) {
-		String[] appletArgs = new String[] { "MyDisplay"};
+		String[] appletArgs = new String[] { "pasquel.guimodule.MyDisplay"};
 		if (passedArgs != null) {
 		  PApplet.main(concat(appletArgs, passedArgs));
 		} else {

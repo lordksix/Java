@@ -35,7 +35,7 @@ public class MarkovWordOne implements IMarkovModel {
 		sb.append(" ");
 		for(int k=0; k < numWords-1; k++){
 		    ArrayList<String> follows = getFollows(key);
-		    if (follows.size() == 0) {break;}
+		    if (follows.isEmpty()) {break;}
 			index = myRandom.nextInt(follows.size());
 			String next = follows.get(index);
 			sb.append(next);
@@ -46,12 +46,11 @@ public class MarkovWordOne implements IMarkovModel {
 	}
 	
 	private ArrayList<String> getFollows(String key) {
-	    ArrayList<String> follows = new ArrayList<String>();
+	    ArrayList<String> follows = new ArrayList<>();
         int pos = 0;
         while(pos<myText.length){
             int start = indexOf(myText,key, pos);
-            if(start == -1) break;
-            if(start + 1 >= myText.length-1) break;
+            if(start == -1 || start + 1 >= myText.length-1) break;
             String next = myText[start+1];
             follows.add(next);
             pos = start +1;

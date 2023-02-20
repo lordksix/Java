@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Vehicle
+comment1.params=
+comment1.target=java.lang.String\ getName()
+comment2.params=name
+comment2.target=void\ setName(java.lang.String)
+comment3.params=
+comment3.target=int\ getSpeed()
+comment4.params=speed
+comment4.target=void\ setSpeed(int)
+comment5.params=
+comment5.target=void\ stop()
+comment6.params=
+comment6.target=void\ slow()
+comment7.params=vehicle
+comment7.target=void\ travelAtSpeedLimit(Vehicle)
+numComments=8

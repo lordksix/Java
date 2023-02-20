@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Train
+comment1.params=name
+comment1.target=Train(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=name
+comment3.target=void\ setName(java.lang.String)
+comment4.params=
+comment4.target=int\ getRPM()
+comment5.params=rpms1
+comment5.target=void\ setRPM(int)
+comment6.params=
+comment6.target=int\ getWheelSize()
+comment7.params=sz
+comment7.target=void\ setWheelSize(int)
+numComments=8

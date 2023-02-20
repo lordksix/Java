@@ -1,5 +1,7 @@
 package earthquake;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 
 public class QuakeEntry implements Comparable<QuakeEntry>{
@@ -8,12 +10,14 @@ public class QuakeEntry implements Comparable<QuakeEntry>{
 	private String title;
 	private double depth;
 	private double magnitude;
+	private LocalDateTime mydate;
 
-	public QuakeEntry(double lat, double lon, double mag,String t, double d) {
+	public QuakeEntry(double lat, double lon, double mag,String t, double d, LocalDateTime da) {
 		myLocation = new Location(lat,lon);		
 		magnitude = mag;
 		title = t;
 		depth = d;
+		mydate = da;
 	}
 	
 	public Location getLocation(){return myLocation;}
@@ -23,6 +27,8 @@ public class QuakeEntry implements Comparable<QuakeEntry>{
 	public String getInfo(){return title;}
 	
 	public double getDepth(){return depth;}
+
+	public LocalDateTime getMydate() {return mydate;}
 
 	@Override
 	public int compareTo(QuakeEntry loc) {
@@ -100,7 +106,7 @@ public class QuakeEntry implements Comparable<QuakeEntry>{
     };
 
 	public String toString(){
-		return String.format("(%3.2f, %3.2f), mag = %3.2f, depth = %3.2f, title = %s", myLocation.getLatitude(),myLocation.getLongitude(),magnitude,depth,title);
+		return String.format("(%3.2f, %3.2f), mag = %3.2f, depth = %3.2f, title = %s, date= %s UTC", myLocation.getLatitude(),myLocation.getLongitude(),magnitude,depth,title,getMydate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 	}
 	
 }

@@ -1,13 +1,19 @@
 package earthquake;
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Collections;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.w3c.dom.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 
@@ -46,9 +52,11 @@ public class EarthQuakeParser {
 					NodeList t1 = elem.getElementsByTagName("georss:point");
 					NodeList t2 = elem.getElementsByTagName("title");
 					NodeList t3 = elem.getElementsByTagName("georss:elev");
+					NodeList t4 = elem.getElementsByTagName("summary");
 					double lat = 0.0, lon = 0.0, depth = 0.0;
 					String title = "NO INFORMATION";
 					double mag = 0.0;
+					LocalDateTime myDate = null;
 					
 					if (t1 != null) {
 						String s2 = t1.item(0).getChildNodes().item(0).getNodeValue();
@@ -75,11 +83,18 @@ public class EarthQuakeParser {
 							title = title.substring(pos+1);
 						}
 					}
-					if (t2 != null){
+					if (t3 != null){
 						String s2 = t3.item(0).getChildNodes().item(0).getNodeValue();
 						depth = Double.parseDouble(s2);
 					}
-					QuakeEntry loc = new QuakeEntry(lat,lon,mag,title,depth);
+					if (t3 != null){
+						String s2 = t4.item(0).getChildNodes().item(0).getNodeValue();
+						
+						int  index = s2.indexOf("<dl><dt>Time</dt><dd>");
+						CharSequence dateStr= s2.substring(index + 21,index + 44);
+						myDate = LocalDateTime.parse(dateStr,DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss z"));					
+					}
+					QuakeEntry loc = new QuakeEntry(lat,lon,mag,title,depth,myDate);
 					list.add(loc);
 				}
 	
@@ -99,16 +114,15 @@ public class EarthQuakeParser {
 	}
 	
 
-/* 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException{
+	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException{
 		EarthQuakeParser xp = new EarthQuakeParser();
-		//String source = "data/2.5_week.atom";
-		String source = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
+		String source = "data/nov20quakedatasmall.atom";
+		//String source = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
 		ArrayList<QuakeEntry> list  = xp.read(source);
 		Collections.sort(list);
 		for(QuakeEntry loc : list){
 			System.out.println(loc);
 		}
 		System.out.println("# quakes = "+list.size());
-		
-	} */
+	}
 }
